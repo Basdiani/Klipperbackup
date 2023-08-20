@@ -11,7 +11,7 @@ backup_folder=$(grep 'backup_folder=' "$parent_path"/.env | sed 's/^.*=//')
 
 # Change directory to parent path
 cd "$parent_path" || exit
-rm -r "$parent_path/$backup_folder"
+
 
 # Check if backup folder exists, create one if it does not
 if [ ! -d "$parent_path/$backup_folder" ]; then
